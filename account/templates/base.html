@@ -4,6 +4,8 @@
 <head>
   <title>{% block title %}{% endblock %}</title>
   <link href="{% static "css/base.css" %}" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
   <div id="header">
@@ -17,7 +19,7 @@
           <a href="{% url "images:list" %}">Images</a>
         </li>
         <li {% if section == "people" %}class="selected"{% endif %}>
-          <a href="#">People</a>
+          <a href="{% url "user_list" %}">People</a>
         </li>
       </ul>
     {% endif %}
